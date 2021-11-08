@@ -49,12 +49,12 @@ $fruit = [
             foreach ($value as $calories => $value2) {
                 foreach ($value2 as $vitamin => $value3) {
                     foreach ($value3 as $sugar => $value4) {
-                        foreach ($value4 as $class5 => $value5) {
+                        foreach ($value4 as $potassium) {
                             echo "<td id=title>$fruitname</td>";
                             echo "<td>$calories</td>";
                             echo "<td id=tdcolor>$vitamin</td>";
                             echo "<td>$sugar</td>";
-                            echo "<td id=tdcolor>$value5</td>";
+                            echo "<td id=tdcolor>$potassium</td>";
                         }
                     }
                 }
