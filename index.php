@@ -44,23 +44,27 @@ $fruit = [
     <h1>Fruits Differences</h1>
     <table cellpadding="0" cellspacing="0">
         <?php
-        foreach ($fruit as $fruitname => $value) {
-            echo '<tr>';
-            foreach ($value as $calories => $value2) {
-                foreach ($value2 as $vitamin => $value3) {
-                    foreach ($value3 as $sugar => $value4) {
-                        foreach ($value4 as $potassium) {
-                            echo "<td id=title>$fruitname</td>";
-                            echo "<td>$calories</td>";
-                            echo "<td id=tdcolor>$vitamin</td>";
-                            echo "<td>$sugar</td>";
-                            echo "<td id=tdcolor>$potassium</td>";
+        function DisplayData($fruit)
+        {
+            foreach ($fruit as $fruitname => $value) {
+                echo '<tr>';
+                foreach ($value as $calories => $value2) {
+                    foreach ($value2 as $vitamin => $value3) {
+                        foreach ($value3 as $sugar => $value4) {
+                            foreach ($value4 as $potassium) {
+                                echo "<td id=title>$fruitname</td>";
+                                echo "<td>$calories</td>";
+                                echo "<td id=tdcolor>$vitamin</td>";
+                                echo "<td>$sugar</td>";
+                                echo "<td id=tdcolor>$potassium</td>";
+                            }
                         }
                     }
                 }
+                echo '</tr>';
             }
-            echo '</tr>';
         }
+        DisplayData($fruit);
         ?>
     </table>
 </body>
